@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
         - name: kubenews
-          image: wilcypher/kube-news:v1
+          image: wilcypher/kube-news:latest
           env: 
           - name: DB-DATABASE
             value: "kubenews"
@@ -79,7 +79,7 @@ spec:
   - port: 80
     targetPort: 8080
     nodePort: 30000 
-  type: NodePort
+  type: LoadBalancer
 
 
 
